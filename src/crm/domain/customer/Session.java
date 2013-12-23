@@ -11,7 +11,7 @@ import crm.domain.user.User;
  */
 public class Session {
 	/** System ID **/
-	private Long id;
+	private String id;
 	/** 会话内容 **/
 	private String content;
 	/** 开始时间 **/
@@ -26,10 +26,10 @@ public class Session {
 	private SessionType type;
 	/** 业务代表所在位置 **/
 	private String agentPlace;
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getContent() {
