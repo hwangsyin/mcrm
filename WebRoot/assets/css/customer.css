@@ -1,0 +1,48 @@
+.customer-form {
+	width: 300px;
+	margin: 5px auto 5px auto;
+	font-size: 14px;
+}
+
+.cf-f {
+	margin: 13px auto 13px auto;
+	font-size: 14px;
+}
+
+.cf-l {
+	/*border: 1px solid #000;*/
+	display: inline-block;
+	width: 80px;
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.cf-v {
+	border: 1px solid #D3D3D3;
+	margin: auto auto auto 10px;
+	padding: 0;
+	height: 27px;
+	width: 200px;
+}
+
+.cf-v-s {
+	border: 1px solid #D3D3D3;
+	margin: auto auto auto 6px;
+	padding: 0;
+	height: 27px;
+	width: 80px;
+}
+
+.cf-v-r {
+	margin: auto 5px auto 10px;
+	/*padding: 0;*/
+}
+
+.cf-b {
+	border: 1px solid #7FC04C;
+	background-color: #7FC04C;
+	color: #FFFFFF;
+	width: 60px;
+	height: 27px;
+	margin: auto auto auto 230px;
+}

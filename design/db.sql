@@ -29,9 +29,11 @@ alter table cu_customer_type add constraint chk_cu_customer_type_enable check(en
 -- customer
 create table cu_customer (
 	id varchar(32) not null,
+	agent_id varchar(32) not null,
 	title varchar(32) not null,
-	phone varchar(32) not null,
+	contact_phone_id varchar(32) not null,
 	name varchar(32),
+	gender varchar(16),
 	age smallint,
 	email varchar(256),
 	address varchar(256),
@@ -39,7 +41,9 @@ create table cu_customer (
 	position varchar(256),
 	enable char(1) not null,
 	start_time timestamp,
-	end_time timestamp
+	end_time timestamp,
+	source varchar(256),
+	description varchar(256)
 ) character set utf8;
 
 alter table cu_customer add constraint pk_cu_customer_id primary key(id);
@@ -71,3 +75,22 @@ create table cu_session (
 ) character set utf8;
 
 alter table cu_session add constraint pk_cu_session_id primary key(id);
+
+-- user
+create table au_user (
+	id varchar(32) not null,
+	name varchar(32) not null,
+	gender varchar(16),
+	age smallint,
+	contact_phone_id varchar(32),
+	email varchar(256),
+	join_time timestamp,
+	quit_time timestamp,
+	employee_id varchar(256),
+	enable char(1) not null,
+	description varchar(256)
+	
+) character set utf8;
+
+alter table au_user add constraint pk_au_user_id primary key(id);
+alter table au_user add constraint chk_au_user_chk check(enable='0' or enable='1');

@@ -3,6 +3,9 @@ package crm.domain.customer;
 import java.util.Date;
 import java.util.List;
 
+import crm.domain.Gender;
+import crm.domain.user.User;
+
 /**
  * 客户
  * @author <a mailto="hwangsyin@gmail.com">King</a>
@@ -11,12 +14,18 @@ import java.util.List;
 public class Customer {
 	/** System ID **/
 	private Long id;
+	/** 所有人 **/
+	private User owner;
 	/** 称呼 **/
 	private String title;
+	/** 联系电话 **/
+	private Phone contactPhone;
 	/** 电话 **/
 	private List<Phone> phones;
 	/** 姓名 **/
 	private String name;
+	/** 性别 **/
+	private Gender gender;
 	/** 年龄 **/
 	private Integer age;
 	/** 电子邮件 **/
@@ -33,6 +42,28 @@ public class Customer {
 	private Date startTime;
 	/** 退出时间 **/
 	private Date endTime;
+	/** 来源(渠道) **/
+	private String source;
+	public User getOwner() {
+		return owner;
+	}
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	/** 描述 **/
+	private String description;
 	public Long getId() {
 		return id;
 	}
@@ -104,5 +135,17 @@ public class Customer {
 	}
 	public void setPosition(String position) {
 		this.position = position;
+	}
+	public Gender getGender() {
+		return gender;
+	}
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+	public Phone getContactPhone() {
+		return contactPhone;
+	}
+	public void setContactPhone(Phone contactPhone) {
+		this.contactPhone = contactPhone;
 	}
 }

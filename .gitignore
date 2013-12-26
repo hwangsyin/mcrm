@@ -10,7 +10,3 @@
 .classpath
 .mymetadata
 .project
-
-web.xml
-dispatcher-servlet.xml
-WebRoot/WEB-INF/classes/*

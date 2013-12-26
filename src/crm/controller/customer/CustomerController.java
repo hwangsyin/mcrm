@@ -55,22 +55,22 @@ public class CustomerController {
 						if (ps == null) {
 							ps = new PrintStream("/F:/tmp/req_sc_context.dump", "UTF-8");
 						}
-						
+
 						ps.println(name + " : " + sc.getAttribute(name));
 					}
 				}
 			}
 		}
-		
+
 		if (ps != null) {
 			ps.close();
 		}
 		*/
-		return "/WEB-INF/views/jsp/customer_list.jsp";
+		return "customer_list";
 	}
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String addUI() {
-		return "/WEB-INF/views/jsp/add_customer.jsp";
+		return "add_customer";
 	}
 	@RequestMapping(method=RequestMethod.POST)
 	public String add() {
